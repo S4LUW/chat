@@ -1,7 +1,16 @@
 const WebSocket = require('ws');
+const https = require('https');
+
+// Carregar certificados SSL
+const server = https.createServer({
+  cert: fs.readFileSync('/etc/letsencrypt/live/iadoperito.com.br/fullchain.pem'),
+  key: fs.readFileSync('/etc/letsencrypt/live/iadoperito.com.br/privkey.pem'),
+  port: 3001
+});
+
 
 // Create a WebSocket server
-const wss = new WebSocket.Server({ port: 3001 });
+const wss = new WebSocket.Server({ server });
 
 // Store connected clients
 const clients = new Set();
