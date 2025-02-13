@@ -1,5 +1,6 @@
 const WebSocket = require('ws');
 const https = require('https');
+const fs = require('fs');
 
 // Carregar certificados SSL
 const server = https.createServer({
