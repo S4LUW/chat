@@ -4,8 +4,8 @@ const fs = require('fs');
 
 // Carregar certificados SSL
 const server = https.createServer({
-  cert: fs.readFileSync('/etc/letsencrypt/live/srv719173.hstgr.cloud/fullchain.pem'),
-  key: fs.readFileSync('/etc/letsencrypt/live/srv719173.hstgr.cloud/privkey.pem'),
+  cert: fs.readFileSync('/etc/letsencrypt/live/iadoperito.com.br/fullchain.pem'),
+  key: fs.readFileSync('/etc/letsencrypt/live/iadoperito.com.br/privkey.pem'),
   port: 3001
 });
 
