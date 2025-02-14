@@ -14,6 +14,6 @@ const server = https.createServer(options, (req, res) => {
 });
 
 // Iniciar servidor na porta 443
-server.listen(443, () => {
-    console.log('Servidor HTTPS rodando na porta 443');
+server.listen(3002, () => {
+    console.log('Servidor HTTPS rodando na porta 3002');
 });
