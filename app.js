@@ -1,4 +1,4 @@
-const WebSocket = require('ws');
+/* const WebSocket = require('ws');
 const https = require('https');
 const fs = require('fs');
 
@@ -7,11 +7,19 @@ const server = https.createServer({
   cert: fs.readFileSync('/etc/letsencrypt/live/iadoperito.com.br/fullchain.pem'),
   key: fs.readFileSync('/etc/letsencrypt/live/iadoperito.com.br/privkey.pem'),
   port: 3001
-});
-
+}); 
 
 // Create a WebSocket server
 const wss = new WebSocket.Server({ server });
+
+*/
+
+const WebSocket = require('ws');
+
+// Create a WebSocket server
+const wss = new WebSocket.Server({ port: 3001 });
+
+
 
 // Store connected clients
 const clients = new Set();
